@@ -1,0 +1,31 @@
+{  "beautify.config": null,
+
+    // List of paths to ignore when using VS Code format command, including format on save. Uses glob pattern matching.
+    "beautify.ignore": [],
+  
+    // Link file types to the beautifier type
+    "beautify.language": {
+      "js": {
+        "type": [
+          "javascript",
+          "json",
+          "jsonc"
+        ],
+        "filename": [
+          ".jshintrc",
+          ".jsbeautifyrc"
+        ]
+      },
+      "css": [
+        "css",
+        "scss"
+      ],
+      "html": [
+        "htm",
+        "html",
+        "erb"
+      ]
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+}
