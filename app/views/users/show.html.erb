@@ -7,4 +7,25 @@
       </h1>
     </section>
   </aside>
+
+  <% if isLogin? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="micropost_form">
+        <%= render 'shared/todo_form' %>
+      </section>
+    </aside>
+  </div>
+  <% end %>
+
+  <div class="col-md-8">
+    <% if @user.todos.any? %>
+    <h3>Microposts (
+      <%= @user.todos.count %>)</h3>
+    <ol class="todos">
+      <%= render @todos %>
+    </ol>
+    <%= will_paginate @todos, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer %>
+    <% end %>
+  </div>
 </div>

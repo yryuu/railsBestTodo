@@ -1,0 +1,13 @@
+<li id="todo-<%= todo.id %>">
+    <%= link_to gravatar_for(todo.user), todo.user %>
+    <span class="user">
+        <%= link_to todo.user.name, todo.user %></span>
+    <span class="content">
+        <%= todo.id %>
+        <%= todo.content %></span>
+    <span class="timestamp">
+        Posted
+        <%= time_ago_in_words(todo.created_at) %> ago.
+    </span>
+    <%= link_to "削除する", todo_delete_path(todo), method: :delete %>
+</li>

@@ -18,6 +18,10 @@ gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
 
 gem 'bcrypt','3.1.7'
+gem 'faker'
+
+gem 'will_paginate','3.1.5'
+gem 'bootstrap-will_paginate', '~> 1.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
